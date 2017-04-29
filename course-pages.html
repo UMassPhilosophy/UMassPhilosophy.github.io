@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UMass Philosophy | Help Pages for Website</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+
+<!-- <div id="container"> -->
+<!-- <div id="content"> -->
+<div id="wrapper">
+<h1 id="creating-and-updating-course-listings">Creating and updating course listings</h1>
+
+<p>We should maintain a total of <strong>four</strong> separate files per semester. Two of them are for scheduling information (one for undergraduate courses and one for graduate courses) and two of them are for course descriptions (one for undergraduate courses and one for graduate courses).</p>
+
+<p>The files should be organized so that for each semester there&rsquo;s a folder inside the shared <code>courses</code> folder. The folder name should follow the format <code>f1992</code> for both graduate and undergraduate courses from Fall 1992.</p>
+
+<h2 id="schedule-information">Schedule information</h2>
+
+<p>The course schedule for the semester should be kept in a <code>csv</code> file. These files can be opened and edited with Microsoft Excel,<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> but also (though a bit more cumbersomely) with any plain text editor. You can use the file <code>sample-sched.csv</code> to get started.</p>
+
+<p>As you will see, each <code>csv</code> file will contain the following information:</p>
+
+<ul>
+<li>Course number (without the &lsquo;Phil&rsquo; part&mdash;e.g. 542, 795F, 100.01, etc.)</li>
+<li>Course title (best to use full words&mdash;i.e. avoid things like &lsquo;Intro to Ethics&rsquo; and opt instead for &lsquo;Introduction to Ethics&rsquo;).</li>
+<li>Instructor last name.</li>
+<li>Meeting times (for the sake of consistency, please refer to the list of abbreviations below).</li>
+<li>Classroom information.</li>
+</ul>
+
+
+<p>Please make sure not to include any header information on the <code>csv</code> file. As you will see in the example file, each and every row corresponds to information about one course. (Thus there is no row on the file for things like &lsquo;Course No&rsquo; or &lsquo;Instructor name&rsquo;. That information will be generated automatically before we update the Drupal page).</p>
+
+<p>The file should be named using the following convention: <code>F2016-grad-sched.csv</code> for the schedule information for graduate courses from Fall 2016.</p>
+
+<h2 id="course-descriptions">Course descriptions</h2>
+
+<p>The course descriptions for the semester should be kept in a Markdown file (the extension will be &lsquo;<code>.md</code>&rsquo;). These files can be opened and edited with any plain text editor. I recommend using the simple in browser editor <a href="https://stackedit.io">StackEdit</a>. You can set it up so you have access to the Dropbox folder I have shared with you from within the browser. Other options (if you prefer a standalone app) include <a href="http://www.texts.io">Texts</a> and <a href="https://www.typora.io">Typora</a>.</p>
+
+<p>The main things to know about editing these files is this:<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup></p>
+
+<ul>
+<li>To specify that a particular word should be italicized, you should surround it with a <code>*</code> or an underscore&mdash;e.g. &lsquo;<code>*word*</code>&rsquo; (and also &lsquo;<code>_word_</code>&rsquo;) will be rendered as &lsquo;<em>word</em>&rsquo;.</li>
+<li>To specify that a particular word should be in bold, you should surround it with two <code>*</code>s&mdash;e.g. &lsquo;<code>**word**</code>&rsquo; will be rendered as &lsquo;<strong>word</strong>&rsquo;.</li>
+<li>Em-dashes should be written as &lsquo;<code>---</code>&rsquo;. En-dashes should be written as &lsquo;<code>--</code>&rsquo;.</li>
+<li><p>For bulleted lists, you simply write a series of lines with a single dash before each of them, as in:</p>
+
+<p>  <pre><code class="markdown">- First item.
+- Second item.
+- Third item.</code></pre><br/>
+(For numbered lists, you replace the dashes with the corresponding number)</p></li>
+</ul>
+
+
+<p>For each course, the file should contain the following information:</p>
+
+<ul>
+<li>Course number (as above: without &lsquo;Phil&rsquo;.)</li>
+<li>Course title.</li>
+<li>Course description.</li>
+<li>Text information (if provided).</li>
+<li>Prerequisites (if any).</li>
+<li>Link to course website (if provided).</li>
+</ul>
+
+
+<p>For <strong>undergraduate courses</strong> only, you should also include the following information:</p>
+
+<ul>
+<li>GenEd requirements that the course satisfies (if any).</li>
+<li>Distribution requirements for the major that the course satisfies (if any).</li>
+</ul>
+
+
+<p>In between any two blocks, please make sure to include a separator. This is a line containing only one of &lsquo;<code>--</code>&rsquo; or &lsquo;<code>***</code>&rsquo;.</p>
+
+<p>The format of each block corresponding to an <strong>undergraduate</strong> course should be as follows (the three <code>'#'</code>s before the course number, as well as the space after them, are all important):</p>
+
+<pre><code class="markdown">### 123 | Philosophy course title
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+_Prerequisites_: Two philosophy courses.
+_Text_: _The Philosophy Book_
+
+**GenEd**: AL | **Major**: M&amp;E
+</code></pre>
+
+
+<p>To avoid confusion with 500-level courses, please specify that prerequisites for those courses apply only to undergraduates. This is somewhat redundant, since course descriptions that include prerequisites will only be listed on the page for undergraduate courses. But in this case, the redundancy will not hurt.</p>
+
+<p>Please make sure to use the same format for course numbers in the schedule file and in the course description file. (For example, use something like &lsquo;100.01&rsquo; throughout, and not &lsquo;100.01&rsquo; in some places and &lsquo;100-01&rsquo; in others.)</p>
+
+<p>Also remember that some courses will be listed in both the graduate and undergraduate pages. Information about prerequisites should only appear on the page for undergraduate courses.</p>
+
+<p>The file should be named using the following convention: <code>F2016-grad-desc.md</code> for the course descriptions for graduate courses from Fall 2016.</p>
+
+<h1 id="uploading-course-information">Uploading course information</h1>
+
+<p>Once you are done editing the <code>csv</code> and <code>md</code> files, you should go to <a href="http://kck-work.ddns.umass.edu/webscripts/">this page</a>. Specify the semester name, whether you are uploading files for undergraduate or graduate courses, and then drag and drop each of the files to the corresponding location.</p>
+
+<p>Click on <button>Upload and process</button> and copy the resulting <code>html</code> code that will appear on the bottom. (The <code>html</code> code should automatically be copied to your clipboard once it appears, but this may not work depending on which browser you are using.)</p>
+
+<p>Once you have the bit of <code>html</code> copied onto your clipboard, you can go to <a href="https://www.umass.edu/philosophy/user"><code>https://www.umass.edu/philosophy/user</code></a> and login using your NetID. Navigate to the page you will edit (see below for more details) and click the <button>Edit</button> button at the top right corner.</p>
+
+<p>You should then make sure to click on the <button>Source</button> button below the &lsquo;Body&rsquo; section, delete any text in the resulting box, and paste the contents of your clipboard.</p>
+
+<p><img src="https://www.dropbox.com/s/xcp8ymsao55igch/Screenshot%202017-04-29%2012.04.15.png?raw=1" alt="Make sure to click the 'Source' button before making changes." /></p>
+
+<p>When you are viewing the raw <code>html</code> of the page content, the editing page should look something like this:</p>
+
+<p><img src="https://www.dropbox.com/s/434rs01ca06q33y/Screenshot%202017-04-29%2012.06.04.png?raw=1" alt="Viewing the raw `html` of the page contents" /></p>
+
+<p>You can then click <button>Save</button>.</p>
+
+<h2 id="current-semester">Current semester</h2>
+
+<p>There are two pages for the current semester&rsquo;s courses: one <a href="https://www.umass.edu/philosophy/current-undergraduate-courses">for undergraduate courses</a> and one <a href="https://www.umass.edu/philosophy/current-graduate-courses">for graduate courses</a>. Note that these two URLs:</p>
+
+<ul>
+<li><code>https://www.umass.edu/philosophy/undergraduate-courses</code></li>
+<li><code>https://www.umass.edu/philosophy/graduate-courses-philosophy</code></li>
+</ul>
+
+
+<p>are currently set to be redirected to their respective &lsquo;current courses&rsquo; page, so you should make sure to only make changes to the contents of the two pages at:</p>
+
+<ul>
+<li><code>https://www.umass.edu/philosophy/current-undergraduate-courses</code></li>
+<li><code>https://www.umass.edu/philosophy/current-graduate-courses</code></li>
+</ul>
+
+
+<p>You may not need to run the <code>csv</code> and <code>md</code> files again at the beginning of the semester, since all the information may already be available in the &lsquo;future courses&rsquo; pages. If so, you can just copy the raw html from that page onto the page for current courses. (Remember: in order to view the raw html of the page you should click on the <button>Source</button> button.)</p>
+
+<p>Once you change the contents of the &lsquo;Current courses&rsquo; page to include the courses for a new semester, you should make sure to &lsquo;unpublish&rsquo; the future courses page (see below).</p>
+
+<p>(For example, before the beginning of the Fall 2017 semester, the course information on the &lsquo;Future courses&rsquo; pages should be migrated to the &lsquo;Current courses&rsquo; page. Since we will not have any information on courses for Spring 2018 for a while, there should not be a &lsquo;Future courses&rsquo; page available. So, the easiest thing to do is to &lsquo;unpublish&rsquo; the &lsquo;Future courses&rsquo; page until we have the course information for Spring 2018.)</p>
+
+<h2 id="future-semester">Future semester</h2>
+
+<p>At some point before registration for the following semester, we should create a page including future courses. In order to create them, please go to one of the following two pages:</p>
+
+<ul>
+<li><a href="">Future undegraduate courses</a></li>
+<li><a href="">Future graduate courses</a></li>
+</ul>
+
+
+<p>After updating that page, you should make sure that they are published, by scrolling to the bottom of the editing page, selecting the <code>Publishing options</code> tab of the last block on that page, and making sure that &lsquo;Published&rsquo; is selected:</p>
+
+<p><img src="https://www.dropbox.com/s/mhn7kmakxucv2cv/Screenshot%202017-04-29%2012.02.05.png?raw=1" alt="Publishing a page" /></p>
+
+<p>You will need to &lsquo;unpublish&rsquo; this page once the information it contains is migrated to the corresponding &lsquo;Current courses&rsquo; page.</p>
+
+<h2 id="past-semesters">Past semesters</h2>
+
+<p>For the time being, we are only keeping one semester&rsquo;s worth of past courses &lsquo;visible&rsquo;. I&rsquo;m still working on a solution for creating a way of allowing the user to navigate to one of many pages, one for each past semester.</p>
+
+<p>Once you replace the contents of the &lsquo;Current courses&rsquo; page with those of a new semester, you should put the current courses on one of the two &lsquo;Past courses&rsquo; pages, which live here:</p>
+
+<ul>
+<li><a href="https://www.umass.edu/philosophy/past-undergraduate-courses"><code>https://www.umass.edu/philosophy/past-undergraduate-courses</code></a></li>
+<li><a href="https://www.umass.edu/philosophy/past-graduate-courses"><code>https://www.umass.edu/philosophy/past-graduate-courses</code></a></li>
+</ul>
+
+
+<p>Before doing that, you should create a page for archiving the last semester&rsquo;s course information. To do so, you should create a new page by clicking on &lsquo;Add content&rsquo; at the top left corner of any page.</p>
+
+<p><img src="https://www.dropbox.com/s/zvmcj7rar2zhh4l/Screenshot%202017-04-29%2012.10.52.png?raw=1" alt="Add content button" /></p>
+
+<p>You will then see a list of options for the type of content you are adding. You should create a &lsquo;Basic page&rsquo; and paste the raw html in the appropriate place. (Before doing that, remember to click the <button>Source</button> button.)</p>
+
+<p>You should title the page &ldquo;Past undergraduate courses&rdquo; or &ldquo;Past graduate courses&rdquo;. You should then scroll down to the bottom of the page, click on the &lsquo;URL path settings&rsquo; tab, and make sure the &lsquo;Generate automatic URL alias&rsquo; is unchecked.</p>
+
+<p>You should then enter, in the box below &lsquo;URL alias&rsquo;, the address we will use for the page. Please use the following format: <code>past-[undergraduate or graduate]-courses-[first letter of the semester followed by full year]</code>. For example, for creating the archive page for undergraduate courses from Fall 2016, you should write the following as the URL alias: <code>past-undergraduate-courses-f2016</code>.</p>
+
+<p>The result should look like this:</p>
+
+<p><img src="https://www.dropbox.com/s/qtzp5hf5gyzm00f/Screenshot%202017-04-29%2012.41.32.png?raw=1" alt="Archiving past semesters' courses" /></p>
+
+<h1 id="example-workflow">Example workflow</h1>
+
+<p>A few weeks or so before the beginning of Fall 2017, you should do each of the following.</p>
+
+<ol>
+<li>First, create two new pages for archiving the course information from Fall 2016, following the instructions above. Those pages should be named &ldquo;Past undergraduate courses&rdquo; and &ldquo;Past graduate courses&rdquo;, and they should be given the correct URL alias. You can either run the corresponding <code>csv</code> and <code>md</code> files to create the raw html for each page <strong>or</strong> you can copy the raw html from the &lsquo;Current courses&rsquo; page.</li>
+<li>Once the information is archived, you should replace the contents of the &lsquo;Past courses&rsquo; pages with that from the corresponding &lsquo;Current courses&rsquo; pages. Alternatively, you can either run the corresponding <code>csv</code> and <code>md</code> files to create the raw html for each page. Thus, for example, the body of the page for current undergraduate courses (which will contain information on undergraduate courses for Fall 2016) should be copied and pasted onto the body of the page for past undergraduate courses.</li>
+<li>Once you&rsquo;ve edited the &lsquo;Past courses&rsquo; page, you should copy the contents of the &lsquo;Future courses&rsquo; page onto the &lsquo;Current courses&rsquo; page. Again, you can always run the <code>csv</code> and <code>md</code> files through the scripts to generate the raw html again or you can copy the raw html from the &lsquo;Future courses&rsquo; page.</li>
+<li>Once you&rsquo;ve updated the &lsquo;Current courses&rsquo; page, you should make sure to &lsquo;unpublish&rsquo; the &lsquo;Future courses&rsquo; page.</li>
+</ol>
+
+
+<p>If you have any questions, please don&rsquo;t hesitate to <a href="mailto:apc@umass.edu">email me</a>.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>If you do open and edit one of the <code>csv</code> files with Microsoft Excel, please make sure <em>not</em> to change the file format.  <a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>For more information about Markdown syntax, you can go to <a href="http://www.markdowntutorial.com">this online tutorial</a><a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+</div>
+<!-- </div>
+</div> -->
+</body>
+</html>
