@@ -42,8 +42,8 @@ body {
   */
 }
 
-.button{
-  font-size: 1.9em;
+button{
+  font-size: .8em !important;
 }
 
 #wrapper{
