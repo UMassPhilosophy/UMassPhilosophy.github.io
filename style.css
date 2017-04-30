@@ -146,6 +146,7 @@ pre {
 code {
     white-space: nowrap;
     font-size: 1.1em;
+    font-family: "Inconsolata", monospace;
     padding: 2px;
     -webkit-border-radius: 3px;
     background-color: #eee;
@@ -328,4 +329,23 @@ mark {
     .footnotes {
         page-break-before: always;
     }
+}
+
+@media screen and (min-width: 769px){
+  #wrapper{
+  width: 900px;
+  margin: auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  /*position: absolute;*/
+}
+}
+
+@media screen and (max-width: 768px){
+  #wrapper{
+  width: 100% !important;
+  margin: 0 auto;
+  padding:0;
+  /*position: absolute;*/
+}
 }
