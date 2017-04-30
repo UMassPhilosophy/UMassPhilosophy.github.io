@@ -14,13 +14,13 @@
 
 <p>We should maintain a total of <strong>four</strong> separate files per semester. Two of them are for scheduling information (one for undergraduate courses and one for graduate courses) and two of them are for course descriptions (one for undergraduate courses and one for graduate courses).</p>
 
-<p>The files should be organized so that for each semester there&rsquo;s a folder inside the shared <code>courses</code> folder. The folder name should follow the format <code>F1992</code> for both graduate and undergraduate courses from Fall 1992.</p>
+<p>The files should be organized so that for each semester there&rsquo;s a folder inside the shared <code>courses</code> folder. The folder name should follow the format <code>f2012</code> for both graduate and undergraduate courses from Fall 2012.</p>
 
 <h2 id="schedule-information">Schedule information</h2>
 
-<p>The course schedule for the semester should be kept in a <code>csv</code> file. These files can be opened and edited with Microsoft Excel,<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> but it is best to use any plain text editor or one of many CSV editors out there (<a href="http://alternativeto.net/software/csved/">this one</a>&mdash;Windows only&mdash;looks like a good option, as does <a href="https://sourceforge.net/projects/recsveditor/">this one</a>). You can use either one of these sample schedules to get started: <a href="files/sample-undergrad-sched.csv">sample undergraduate schedule</a>, <a href="files/sample-grad-sched.csv">sample graduate schedule</a></p>
+<p>The course schedule for the semester should be kept in a CSV file. These files can be opened and edited with Microsoft Excel,<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> but it is best to use any plain text editor or one of many CSV editors out there (<a href="http://alternativeto.net/software/csved/">this one</a>&mdash;Windows only&mdash;looks like a good option, as does <a href="https://sourceforge.net/projects/recsveditor/">this one</a>). You can use either one of these sample schedules to get started: <a href="files/sample-undergrad-sched.csv">sample undergraduate schedule</a>, <a href="files/sample-grad-sched.csv">sample graduate schedule</a></p>
 
-<p>As you will see, each <code>csv</code> file will contain the following information:</p>
+<p>As you will see, each CSV file will contain the following information:</p>
 
 <ul>
 <li>Course number (without the &lsquo;Phil&rsquo; part&mdash;e.g. 542, 795F, 100.01, etc.)</li>
@@ -31,9 +31,9 @@
 </ul>
 
 
-<p>Please make sure not to include any header information on the <code>csv</code> file. As you will see in the example file, each and every row corresponds to information about one course. (Thus there is no row on the file for things like &lsquo;Course No&rsquo; or &lsquo;Instructor name&rsquo;. That information will be generated automatically before we update the Drupal page).</p>
+<p>Please make sure not to include any header information on the CSV file. As you will see in the example file, each and every row corresponds to information about one course. (Thus there is no row on the file for things like &lsquo;Course No&rsquo; or &lsquo;Instructor name&rsquo;. That information will be generated automatically before we update the Drupal page).</p>
 
-<p>The file should be named using the following convention: <code>F2016-grad-sched.csv</code> for the schedule information for graduate courses from Fall 2016.</p>
+<p>The file should be named using the following convention: <code>f2016-graduate-sched.csv</code> for the schedule information for graduate courses from Fall 2016.</p>
 
 <h2 id="course-descriptions">Course descriptions</h2>
 
@@ -98,25 +98,25 @@ An introduction to Western philosophy through the examination of one of the most
 
 <p>Also remember that some courses will be listed in both the graduate and undergraduate pages. Information about prerequisites should only appear on the page for undergraduate courses.</p>
 
-<p>The file should be named using the following convention: <code>F2016-grad-desc.md</code> for the course descriptions for graduate courses from Fall 2016 and <code>F2016-undergrad-sched.md</code> for the undergraduate courses.</p>
+<p>The file should be named using the following convention: <code>f2016-graduate-desc.md</code> for the course descriptions for graduate courses from Fall 2016 and <code>f2016-undergraduate-sched.md</code> for the undergraduate courses.</p>
 
 <p>You can use one of these sample course description files to get started: <a href="sample-undergrad-sched.md">sample undergraduate course description</a>, <a href="files/sample-grad-desc.md">sample graduate course descriptions</a>.</p>
 
 <h1 id="uploading-course-information">Uploading course information</h1>
 
-<p>Once you are done editing the <code>csv</code> and <code>md</code> files, you should go to <a href="http://kck-work.ddns.umass.edu/webscripts/">this page</a>. Specify the semester name, whether you are uploading files for undergraduate or graduate courses, and then drag and drop each of the files to the corresponding location.</p>
+<p>Once you are done editing the CSV and Markdown files, you should go to <a href="http://kck-work.ddns.umass.edu/webscripts/">this page</a>. Specify the semester name, whether you are uploading files for undergraduate or graduate courses, and then drag and drop each of the files to the corresponding location.</p>
 
-<p>Click on <button>Upload and process</button> and copy the resulting <code>html</code> code that will appear on the bottom. (The <code>html</code> code should automatically be copied to your clipboard once it appears, but this may not work depending on which browser you are using.)</p>
+<p>Click on <button>Upload and process</button> and copy the resulting HTML code that will appear on the bottom. (The HTML code should automatically be copied to your clipboard once it appears, but this may not work depending on which browser you are using.)</p>
 
-<p>Once you have the bit of <code>html</code> copied onto your clipboard, you can go to <a href="https://www.umass.edu/philosophy/user"><code>https://www.umass.edu/philosophy/user</code></a> and login using your NetID. Navigate to the page you will edit (see below for more details) and click the <button>Edit</button> button at the top right corner.</p>
+<p>Once you have the bit of HTML copied onto your clipboard, you can go to <a href="https://www.umass.edu/philosophy/user"><code>https://www.umass.edu/philosophy/user</code></a> and login using your NetID. Navigate to the page you will edit (see below for more details) and click the <button>Edit</button> button at the top right corner.</p>
 
 <p>You should then make sure to click on the <button>Source</button> button below the &lsquo;Body&rsquo; section, delete any text in the resulting box, and paste the contents of your clipboard.</p>
 
 <p><img src="img/source-button.png" alt="Make sure to click the 'Source' button before making changes." /></p>
 
-<p>When you are viewing the raw <code>html</code> of the page content, the editing page should look something like this:</p>
+<p>When you are viewing the raw HTML of the page content, the editing page should look something like this:</p>
 
-<p><img src="img/raw.png" alt="Viewing the raw `html` of the page contents" /></p>
+<p><img src="img/raw.png" alt="Viewing the raw HTML of the page contents" /></p>
 
 <p>You can then click <button>Save</button>.</p>
 
@@ -138,7 +138,7 @@ An introduction to Western philosophy through the examination of one of the most
 </ul>
 
 
-<p>You may not need to run the <code>csv</code> and <code>md</code> files again at the beginning of the semester, since all the information may already be available in the &lsquo;future courses&rsquo; pages. If so, you can just copy the raw html from that page onto the page for current courses. (Remember: in order to view the raw html of the page you should click on the <button>Source</button> button.)</p>
+<p>You may not need to run the CSV and Markdown files again at the beginning of the semester, since all the information may already be available in the &lsquo;future courses&rsquo; pages. If so, you can just copy the raw html from that page onto the page for current courses. (Remember: in order to view the raw html of the page you should click on the <button>Source</button> button.)</p>
 
 <p>Once you change the contents of the &lsquo;Current courses&rsquo; page to include the courses for a new semester, you should make sure to &lsquo;unpublish&rsquo; the future courses page (see below).</p>
 
@@ -180,7 +180,7 @@ An introduction to Western philosophy through the examination of one of the most
 
 <p>You should title the page &ldquo;Past undergraduate courses&rdquo; or &ldquo;Past graduate courses&rdquo;. You should then scroll down to the bottom of the page, click on the &lsquo;URL path settings&rsquo; tab, and make sure the &lsquo;Generate automatic URL alias&rsquo; is unchecked.</p>
 
-<p>You should then enter, in the box below &lsquo;URL alias&rsquo;, the address we will use for the page. Please use the following format: <code>past-[undergraduate or graduate]-courses-[first letter of the semester followed by full year]</code>. For example, for creating the archive page for undergraduate courses from Fall 2016, you should write the following as the URL alias: <code>past-undergraduate-courses-f2016</code>.</p>
+<p>You should then enter, in the box below &lsquo;URL alias&rsquo;, the address we will use for the page. Please use the following format: <code>past-[(under)graduate]-courses-[sYYYY]</code>, where <code>sYYYY</code> should consist of the first (<strong>lowercase</strong>) letter of the semester name followed by the full year. For example, for creating the archive page for undergraduate courses from Fall 2016, you should write the following as the URL alias: <code>past-undergraduate-courses-f2016</code>.</p>
 
 <p>The result should look like this:</p>
 
@@ -191,9 +191,9 @@ An introduction to Western philosophy through the examination of one of the most
 <p>A few weeks or so before the beginning of Fall 2017, you should do each of the following.</p>
 
 <ol>
-<li>First, create two new pages for archiving the course information from Fall 2016, following the instructions above. Those pages should be named &ldquo;Past undergraduate courses&rdquo; and &ldquo;Past graduate courses&rdquo;, and they should be given the correct URL alias. You can either run the corresponding <code>csv</code> and <code>md</code> files to create the raw html for each page <strong>or</strong> you can copy the raw html from the &lsquo;Current courses&rsquo; page.</li>
-<li>Once the information is archived, you should replace the contents of the &lsquo;Past courses&rsquo; pages with that from the corresponding &lsquo;Current courses&rsquo; pages. Alternatively, you can either run the corresponding <code>csv</code> and <code>md</code> files to create the raw html for each page. Thus, for example, the body of the page for current undergraduate courses (which will contain information on undergraduate courses for Fall 2016) should be copied and pasted onto the body of the page for past undergraduate courses.</li>
-<li>Once you&rsquo;ve edited the &lsquo;Past courses&rsquo; page, you should copy the contents of the &lsquo;Future courses&rsquo; page onto the &lsquo;Current courses&rsquo; page. Again, you can always run the <code>csv</code> and <code>md</code> files through the scripts to generate the raw html again or you can copy the raw html from the &lsquo;Future courses&rsquo; page.</li>
+<li>First, create two new pages for archiving the course information from Fall 2016, following the instructions above. Those pages should be named &ldquo;Past undergraduate courses&rdquo; and &ldquo;Past graduate courses&rdquo;, and they should be given the correct URL alias. You can either run the corresponding CSV and Markdown files to create the raw html for each page <strong>or</strong> you can copy the raw html from the &lsquo;Current courses&rsquo; page.</li>
+<li>Once the information is archived, you should replace the contents of the &lsquo;Past courses&rsquo; pages with that from the corresponding &lsquo;Current courses&rsquo; pages. Alternatively, you can either run the corresponding CSV and Markdown files to create the raw html for each page. Thus, for example, the body of the page for current undergraduate courses (which will contain information on undergraduate courses for Fall 2016) should be copied and pasted onto the body of the page for past undergraduate courses.</li>
+<li>Once you&rsquo;ve edited the &lsquo;Past courses&rsquo; page, you should copy the contents of the &lsquo;Future courses&rsquo; page onto the &lsquo;Current courses&rsquo; page. Again, you can always run the CSV and Markdown files through the scripts to generate the raw html again or you can copy the raw html from the &lsquo;Future courses&rsquo; page.</li>
 <li>Once you&rsquo;ve updated the &lsquo;Current courses&rsquo; page, you should make sure to &lsquo;unpublish&rsquo; the &lsquo;Future courses&rsquo; page.</li>
 </ol>
 
@@ -203,7 +203,7 @@ An introduction to Western philosophy through the examination of one of the most
 <hr/>
 <ol>
 <li id="fn:1">
-<p>If possible, please avoid using Excel for these purposes. Excel may scramble things a bit, and the formatting of the CSV files should be as clean as possible so they work well with the scripts for generating the html content. If you do open and edit one of the <code>csv</code> files with Microsoft Excel, please make sure <em>not</em> to change the file format.  <a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<p>If possible, please avoid using Excel for these purposes. Excel may scramble things a bit, and the formatting of the CSV files should be as clean as possible so they work well with the scripts for generating the html content. If you do open and edit one of the CSV files with Microsoft Excel, please make sure <em>not</em> to change the file format.  <a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
 <li id="fn:2">
 <p>For more information about Markdown syntax, you can go to <a href="http://www.markdowntutorial.com">this online tutorial</a><a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
 </ol>
