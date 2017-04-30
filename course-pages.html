@@ -14,11 +14,11 @@
 
 <p>We should maintain a total of <strong>four</strong> separate files per semester. Two of them are for scheduling information (one for undergraduate courses and one for graduate courses) and two of them are for course descriptions (one for undergraduate courses and one for graduate courses).</p>
 
-<p>The files should be organized so that for each semester there&rsquo;s a folder inside the shared <code>courses</code> folder. The folder name should follow the format <code>F1992</code> for both graduate and undergraduate courses from Fall 1992.</p>
+<p>The files should be organized so that for each semester there&rsquo;s a folder inside the shared <code>courses</code> folder. The folder name should follow the format <code>f1992</code> for both graduate and undergraduate courses from Fall 1992.</p>
 
 <h2 id="schedule-information">Schedule information</h2>
 
-<p>The course schedule for the semester should be kept in a <code>csv</code> file. These files can be opened and edited with Microsoft Excel,<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> but also (though a bit more cumbersomely) with any plain text editor. You can use the file <code>sample-sched.csv</code> to get started.</p>
+<p>The course schedule for the semester should be kept in a <code>csv</code> file. These files can be opened and edited with Microsoft Excel,<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> but it is best to use any plain text editor or one of many CSV editors out there (<a href="http://alternativeto.net/software/csved/">this one</a>&mdash;Windows only&mdash;looks like a good option, as does <a href="https://sourceforge.net/projects/recsveditor/">this one</a>). You can use either one of these sample schedules to get started: <a href="files/sample-undergrad-sched.csv">sample undergraduate schedule</a>, <a href="files/sample-grad-sched.csv">sample graduate schedule</a></p>
 
 <p>As you will see, each <code>csv</code> file will contain the following information:</p>
 
@@ -37,7 +37,7 @@
 
 <h2 id="course-descriptions">Course descriptions</h2>
 
-<p>The course descriptions for the semester should be kept in a Markdown file (the extension will be &lsquo;<code>.md</code>&rsquo;). These files can be opened and edited with any plain text editor. I recommend using the simple in browser editor <a href="https://stackedit.io">StackEdit</a>. You can set it up so you have access to the Dropbox folder I have shared with you from within the browser. Other options (if you prefer a standalone app) include <a href="http://www.texts.io">Texts</a> and <a href="https://www.typora.io">Typora</a>.</p>
+<p>The course descriptions for the semester should be kept in a Markdown file (the extension will be &lsquo;<code>.md</code>&rsquo;). These files can be opened and edited with any plain text editor (Microsoft Notepad should do). I recommend using the simple in browser editor <a href="https://stackedit.io">StackEdit</a>. You can set it up so you have access to the Dropbox folder I have shared with you from within the browser. Other options (if you prefer a standalone app) include <a href="http://www.texts.io">Texts</a> and <a href="https://www.typora.io">Typora</a>.</p>
 
 <p>The main things to know about editing these files is this:<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup></p>
 
@@ -51,6 +51,9 @@
 - Second item.
 - Third item.</code></pre><br/>
 (For numbered lists, you replace the dashes with the corresponding number)</p></li>
+<li><p>To include links (for instance, to a course website), you use the following format: <code>[text](url)</code>. For instance, to have the text &lsquo;UMass Philosophy homepage&rsquo; be treated as a link to the department&rsquo;s homepage, you would write:</p>
+
+<p>  <pre><code class="markdown">[UMass Philosophy homepage](http://umass.edu/philosophy)</code></pre></p></li>
 </ul>
 
 
@@ -78,20 +81,15 @@
 
 <p>The format of each block corresponding to an <strong>undergraduate</strong> course should be as follows (the three <code>'#'</code>s before the course number, as well as the space after them, are all important):</p>
 
-<pre><code class="markdown">### 123 | Philosophy course title
+<pre><code class="markdown">### 100H | Introduction to Philosophy (Honors)
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+An introduction to Western philosophy through the examination of one of the most influential philosophical books ever written: Descartes&apos; _Meditations on First Philosophy_. Topics include the nature and existence of the self, the existence of God, the nature of bodies, the relation of cause and effect, knowledge that is independent of sense experience, and skepticism about the external world. An underlying sub-theme of the course is: skepticism. Accordingly, we will also study texts by two skeptical philosophers: Gournay&apos;s _The Equality of Men and Women_ and Hume&apos;s _Enquiry Concerning Human Understanding_. We will explore sceptical challenges to the view that &quot;women are by nature intellectually inferior to men&quot; (Gournay), that the senses reveal metaphysical truth (Descartes), and that our inductive practices are rationally justifiable (Hume). The beginning of the course will focus on the structure of philosophical arguments and we&apos;ll master some tools for evaluating them. Students will use their skills in textual interpretation and argument analysis in the one-page, weekly reflection assignments; the final take-home essay; in-class tests, and the short class presentation. Given the importance of the texts, the depth and breadth of topics covered, the focus on critical reasoning, and the stress on written and verbal expression, this course meets the objectives of the General Education (Arts and Literature) curriculum. This is a 4-credit course and is open solely to Commonwealth College Honors students.
 
-_Prerequisites_: Two philosophy courses.
-_Text_: _The Philosophy Book_
+(This course is restricted to Commonwealth College first-year students.)
 
-**GenEd**: AL | **Major**: M&amp;E
-</code></pre>
+**Note**: Once first-year students have registered, in late June, this class will be opened to other Commonwealth College students.
+
+**Gen Ed**: AL</code></pre>
 
 
 <p>To avoid confusion with 500-level courses, please specify that prerequisites for those courses apply only to undergraduates. This is somewhat redundant, since course descriptions that include prerequisites will only be listed on the page for undergraduate courses. But in this case, the redundancy will not hurt.</p>
@@ -100,7 +98,9 @@ _Text_: _The Philosophy Book_
 
 <p>Also remember that some courses will be listed in both the graduate and undergraduate pages. Information about prerequisites should only appear on the page for undergraduate courses.</p>
 
-<p>The file should be named using the following convention: <code>F2016-grad-desc.md</code> for the course descriptions for graduate courses from Fall 2016.</p>
+<p>The file should be named using the following convention: <code>F2016-grad-desc.md</code> for the course descriptions for graduate courses from Fall 2016 and <code>F2016-undergrad-sched.md</code> for the undergraduate courses.</p>
+
+<p>You can use one of these sample course description files to get started: <a href="sample-undergrad-sched.md">sample undergraduate course description</a>, <a href="files/sample-grad-desc.md">sample graduate course descriptions</a>.</p>
 
 <h1 id="uploading-course-information">Uploading course information</h1>
 
@@ -180,7 +180,7 @@ _Text_: _The Philosophy Book_
 
 <p>You should title the page &ldquo;Past undergraduate courses&rdquo; or &ldquo;Past graduate courses&rdquo;. You should then scroll down to the bottom of the page, click on the &lsquo;URL path settings&rsquo; tab, and make sure the &lsquo;Generate automatic URL alias&rsquo; is unchecked.</p>
 
-<p>You should then enter, in the box below &lsquo;URL alias&rsquo;, the address we will use for the page. Please use the following format: <code>past-[undergraduate or graduate]-courses-[SYYYY]</code>. For example, for creating the archive page for undergraduate courses from Fall 2016, you should write the following as the URL alias: <code>past-undergraduate-courses-f2016</code>.</p>
+<p>You should then enter, in the box below &lsquo;URL alias&rsquo;, the address we will use for the page. Please use the following format: <code>past-[undergraduate or graduate]-courses-[first letter of the semester followed by full year]</code>. For example, for creating the archive page for undergraduate courses from Fall 2016, you should write the following as the URL alias: <code>past-undergraduate-courses-f2016</code>.</p>
 
 <p>The result should look like this:</p>
 
@@ -203,7 +203,7 @@ _Text_: _The Philosophy Book_
 <hr/>
 <ol>
 <li id="fn:1">
-<p>If you do open and edit one of the <code>csv</code> files with Microsoft Excel, please make sure <em>not</em> to change the file format.  <a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<p>If possible, please avoid using Excel for these purposes. Excel may scramble things a bit, and the formatting of the CSV files should be as clean as possible so they work well with the scripts for generating the html content. If you do open and edit one of the <code>csv</code> files with Microsoft Excel, please make sure <em>not</em> to change the file format.  <a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
 <li id="fn:2">
 <p>For more information about Markdown syntax, you can go to <a href="http://www.markdowntutorial.com">this online tutorial</a><a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
 </ol>
